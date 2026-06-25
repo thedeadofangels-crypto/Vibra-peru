@@ -821,6 +821,67 @@ from{opacity:.5;}
 to{opacity:1;}
 }
 
+.cronograma-bg{
+  background:
+  linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.9)),
+  url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  position:relative;
+  overflow:hidden;
+}
+
+/* luces tipo festival */
+.cronograma-bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+  radial-gradient(circle at 20% 30%, rgba(255,123,0,.15), transparent 40%),
+  radial-gradient(circle at 80% 60%, rgba(255,0,150,.12), transparent 40%);
+  animation:cronolights 6s infinite alternate;
+}
+
+@keyframes cronolights{
+  from{opacity:.6;}
+  to{opacity:1;}
+}
+
+
+.footer{
+  background:#05060a;
+  padding:60px 20px 20px;
+  color:#aaa;
+}
+
+.footer-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+  max-width:1100px;
+  margin:auto;
+  margin-bottom:30px;
+}
+
+.footer h3{
+  color:white;
+  margin-bottom:15px;
+}
+
+.footer p{
+  font-size:14px;
+  line-height:1.8;
+}
+
+.footer-bottom{
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-top:20px;
+  font-size:13px;
+  color:#666;
+}
+
 </style>
 </head>
 
@@ -958,7 +1019,7 @@ luces, energía y emociones inolvidables.
 
 </section>
 
-<section id="cronograma">
+<section id="cronograma" class="cronograma-bg">
 
 <h2>Cronograma</h2>
 
@@ -1198,8 +1259,34 @@ La energía está subiendo… el momento se acerca
 
 </section>
 
-<footer>
-Vibra Perú 2026 — Hecho para vivir la música
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <div>
+      <h3>Vibra Perú</h3>
+      <p>El festival donde la música, luces y energía se unen en una sola experiencia inolvidable.</p>
+    </div>
+
+    <div>
+      <h3>Redes Sociales</h3>
+      <p>📸 Instagram: @vibraperu</p>
+      <p>📘 Facebook: Vibra Perú Oficial</p>
+      <p>🎵 TikTok: @vibraperu</p>
+    </div>
+
+    <div>
+      <h3>Contacto</h3>
+      <p>📧 vibraperu@gmail.com</p>
+      <p>📱 +51 999 999 999</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Vibra Perú — Todos los derechos reservados
+  </div>
+
 </footer>
 
 <div id="popup">
