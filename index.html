@@ -299,6 +299,27 @@ margin-bottom:50px;
     font-size:18px;
 }
 
+.buy-btn{
+    display:block;
+    width:100%;
+    padding:15px;
+    border:none;
+    background:linear-gradient(45deg,#ff7b00,#ffb300);
+    border-radius:50px;
+    color:white;
+    margin-top:30px;
+    cursor:pointer;
+    font-size:18px;
+    text-decoration:none;
+    text-align:center;
+    transition:.3s;
+}
+
+.buy-btn:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 20px rgba(255,123,0,.4);
+}
+
 .vip{
     border:2px solid #ff7b00;
 }
@@ -509,6 +530,178 @@ display:flex;
     box-shadow:0 0 20px rgba(255,255,255,.1);
 }
   
+.experience-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+text-align:center;
+}
+
+.experience-grid div{
+background:rgba(255,255,255,.05);
+padding:35px;
+border-radius:25px;
+}
+
+.experience-grid span{
+font-size:50px;
+display:block;
+margin-bottom:15px;
+}
+
+.experience-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+text-align:center;
+}
+
+.experience-grid div{
+background:rgba(255,255,255,.05);
+padding:35px;
+border-radius:25px;
+}
+
+.experience-grid span{
+font-size:50px;
+display:block;
+margin-bottom:15px;
+}
+
+.timeline{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.timeline div{
+background:rgba(255,255,255,.05);
+padding:25px;
+border-radius:20px;
+width:220px;
+text-align:center;
+border-top:4px solid #ff7b00;
+}
+
+.timeline span{
+font-size:24px;
+font-weight:bold;
+color:#ff7b00;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:25px;
+text-align:center;
+}
+
+.stats-grid div{
+padding:35px;
+border-radius:20px;
+background:rgba(255,255,255,.04);
+}
+
+.stats-grid h3{
+font-size:55px;
+background:linear-gradient(45deg,#ff7b00,#ff3c7b);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.about-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.about-box div{
+background:rgba(255,255,255,.05);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.08);
+}
+
+
+.about-bg{
+background:
+linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.85)),
+url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+.experience-bg{
+background:
+linear-gradient(rgba(15,5,25,.85),rgba(10,5,20,.9)),
+url("https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+.artists-bg{
+background:
+linear-gradient(rgba(20,0,30,.85),rgba(5,5,15,.9)),
+url("https://images.unsplash.com/photo-1506157786151-b8491531f063");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+.tickets-bg{
+background:
+linear-gradient(
+135deg,
+rgba(255,123,0,.15),
+rgba(0,0,0,.9)
+);
+}
+
+.map-bg{
+background:
+linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.9)),
+url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+#stats{
+position:relative;
+overflow:hidden;
+}
+
+#stats::before{
+content:"VIBRA";
+position:absolute;
+font-size:250px;
+font-weight:900;
+opacity:.03;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+pointer-events:none;
+}
+
+section{
+position:relative;
+}
+
+section::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(
+to bottom,
+transparent,
+rgba(0,0,0,.15)
+);
+pointer-events:none;
+}
 
 
 </style>
@@ -518,7 +711,7 @@ display:flex;
 
 <header>
 <div class="logo">
-    <img src="https://cdn.teleticket.com.pe/especiales/vibraperu4/images/vibraperulogo.png" alt="Vibra Perú Logo">
+    <img src="https://i.ibb.co/nqLghKK4/Chat-GPT-Image-25-jun-2026-02-16-18-p-m.png" alt="Vibra Perú Logo">
 </div>
 
 <nav>
@@ -538,11 +731,89 @@ display:flex;
 </div>
 </section>
 
+<section id="acerca" class="about-bg">
+
+<h2>Acerca de Vibra Perú</h2>
+
+<div class="about-box">
+
+<div>
+<h3>🎵 Música sin límites</h3>
+<p>
+Vibra Perú reúne a los artistas más importantes del país en una experiencia
+llena de energía, cultura y emociones.
+</p>
+</div>
+
+<div>
+<h3>🎆 Producción de primer nivel</h3>
+<p>
+Pantallas gigantes, efectos visuales, luces sincronizadas y un escenario
+diseñado para sorprender.
+</p>
+</div>
+
+<div>
+<h3>🌎 Miles de asistentes</h3>
+<p>
+Personas de todo el Perú se reúnen para vivir una jornada inolvidable.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="experiencia" class="experience-bg">
+
+<h2>La Experiencia Vibra Perú</h2>
+
+<div class="experience-grid">
+
+<div>
+<span>🎤</span>
+<h3>Escenarios Épicos</h3>
+<p>Shows en vivo con artistas nacionales e internacionales.</p>
+</div>
+
+<div>
+<span>🍔</span>
+<h3>Zona Gastronómica</h3>
+<p>Los mejores food trucks y experiencias culinarias.</p>
+</div>
+
+<div>
+<span>📸</span>
+<h3>Photo Spots</h3>
+<p>Espacios diseñados para tus mejores fotos.</p>
+</div>
+
+<div>
+<span>🎇</span>
+<h3>Show de Luces</h3>
+<p>Un espectáculo visual durante toda la noche.</p>
+</div>
+
+</div>
+
+</section>
+
 <!-- ARTISTAS -->
 
-<section class="artistas" id="artistas">
+<section class="artistas artists-bg" id="artistas">
 
     <h2>Artistas Invitados</h2>
+
+<p style="
+text-align:center;
+max-width:700px;
+margin:auto auto 50px;
+color:#ddd;
+font-size:18px;
+">
+Los artistas más importantes del Perú se reunirán en una noche llena de música,
+luces, energía y emociones inolvidables.
+</p>
 
     <div class="artistas-container">
 
@@ -570,8 +841,38 @@ display:flex;
 
 </section>
 
+<section id="cronograma">
+
+<h2>Cronograma</h2>
+
+<div class="timeline">
+
+<div>
+<span>4:00 PM</span>
+<h3>Apertura de puertas</h3>
+</div>
+
+<div>
+<span>6:00 PM</span>
+<h3>Primeros shows</h3>
+</div>
+
+<div>
+<span>8:00 PM</span>
+<h3>Artistas principales</h3>
+</div>
+
+<div>
+<span>11:00 PM</span>
+<h3>Show de luces</h3>
+</div>
+
+</div>
+
+</section>
+
 <!-- TICKETS -->
-<section class="tickets" id="entradas">
+<section class="tickets tickets-bg" id="entradas">
 
 <h2>Entradas</h2>
 
@@ -593,7 +894,10 @@ display:flex;
             <li>Experiencia completa Vibra Perú</li>
         </ul>
 
-        <button>Comprar</button>
+       <a href="https://www.ticketmaster.pe/event/vibraperu2026" target="_blank" class="buy-btn">
+    Comprar
+</a>
+
 
     </div>
 
@@ -615,7 +919,9 @@ display:flex;
             <li>Ingreso rápido</li>
         </ul>
 
-        <button>Comprar</button>
+        <a href="https://www.ticketmaster.pe/event/vibraperu2026" target="_blank" class="buy-btn">
+    Comprar
+</a>
 
     </div>
 
@@ -635,7 +941,10 @@ display:flex;
             <li>Experiencia VIP extendida</li>
         </ul>
 
-        <button>Comprar</button>
+       <a href="https://www.ticketmaster.pe/event/vibraperu2026" target="_blank" class="buy-btn">
+    Comprar
+</a>
+
 
     </div>
 
@@ -644,7 +953,7 @@ display:flex;
 </section>
 
 <!-- MAPA DE ZONAS -->
-<section id="zonas">
+<section id="zonas" class="map-bg">
 
 <h2>Mapa del Festival</h2>
 
@@ -676,7 +985,34 @@ Conoce cómo estarán distribuidas las zonas dentro del evento
 </div>
 
 </section>
-  
+  <section id="stats">
+
+<div class="stats-grid">
+
+<div>
+<h3>20+</h3>
+<p>Artistas</p>
+</div>
+
+<div>
+<h3>15K+</h3>
+<p>Asistentes</p>
+</div>
+
+<div>
+<h3>10h</h3>
+<p>De música</p>
+</div>
+
+<div>
+<h3>3</h3>
+<p>Zonas exclusivas</p>
+</div>
+
+</div>
+
+</section>
+
 <!-- COUNTDOWN -->
 <section style="background:radial-gradient(circle at center, rgba(255,60,123,.15), transparent 60%);">
 <h2>⏳ El festival está por comenzar</h2>
