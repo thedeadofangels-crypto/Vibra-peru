@@ -639,24 +639,65 @@ margin-bottom:10px;
 color:#ff7b00;
 }
 
-.stats-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:25px;
-text-align:center;
+.stats-section {
+  position: relative;
+  width: 100%;
+  padding: 100px 20px;
+  background-image: url("https://i.ibb.co/4gtKVywJ/Chat-GPT-Image-25-jun-2026-02-41-16-p-m.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
 }
 
-.stats-grid div{
-padding:35px;
-border-radius:20px;
-background:rgba(255,255,255,.04);
+/* Oscurecer fondo para que resalten las stats */
+.stats-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
 }
 
-.stats-grid h3{
-font-size:55px;
-background:linear-gradient(45deg,#ff7b00,#ff3c7b);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+/* Contenedor */
+.stats-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+  z-index: 2;
+}
+
+/* Tarjetas */
+.stat-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 15px;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-card h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #ffcc00;
+  letter-spacing: 1px;
+}
+
+.stat-card p {
+  font-size: 14px;
+  opacity: 0.9;
 }
 
 .about-box{
@@ -1061,31 +1102,33 @@ Conoce cómo estarán distribuidas las zonas dentro del evento
 </div>
 
 </section>
-  <section id="stats">
+<section class="stats-section">
 
-<div class="stats-grid">
+  <div class="stats-overlay"></div>
 
-<div>
-<h3>20+</h3>
-<p>Artistas</p>
-</div>
+  <div class="stats-container">
 
-<div>
-<h3>15K+</h3>
-<p>Asistentes</p>
-</div>
+    <div class="stat-card">
+      <h2>20+</h2>
+      <p>Artistas</p>
+    </div>
 
-<div>
-<h3>10h</h3>
-<p>De música</p>
-</div>
+    <div class="stat-card">
+      <h2>15K+</h2>
+      <p>Asistentes</p>
+    </div>
 
-<div>
-<h3>3</h3>
-<p>Zonas exclusivas</p>
-</div>
+    <div class="stat-card">
+      <h2>10h</h2>
+      <p>De música</p>
+    </div>
 
-</div>
+    <div class="stat-card">
+      <h2>3</h2>
+      <p>Zonas exclusivas</p>
+    </div>
+
+  </div>
 
 </section>
 
