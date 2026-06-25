@@ -753,11 +753,19 @@ rgba(0,0,0,.9)
 
 .map-bg{
 background:
-linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.9)),
-url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3");
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
+url("https://img.freepik.com/vector-gratis/vector-fondo-abstracto-negro-gris_53876-62767.jpg?semt=ais_hybrid&w=740&q=80");
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
+}
+
+.map-bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at center, rgba(255,123,0,.12), transparent 60%);
+  pointer-events:none;
 }
 
 #stats{
