@@ -890,6 +890,118 @@ to{opacity:1;}
   color:#666;
 }
 
+
+.contacto-section{
+  padding:80px 8%;
+  background:
+  linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.95)),
+  url("https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f");
+  background-size:cover;
+  background-position:center;
+}
+
+.contacto-container{
+  max-width:1300px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.contacto-info h2{
+  font-size:60px;
+  text-align:left;
+  margin-bottom:20px;
+}
+
+.contacto-info h2 span{
+  color:#ff7b00;
+}
+
+.contacto-info p{
+  color:#ccc;
+  font-size:18px;
+  line-height:1.8;
+  margin-bottom:35px;
+}
+
+.contacto-beneficios{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.contacto-beneficios div{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  padding:20px;
+  border-radius:15px;
+}
+
+.contacto-form{
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(15px);
+  border-radius:25px;
+  padding:35px;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.contacto-form h3{
+  margin-bottom:20px;
+  font-size:30px;
+}
+
+.contacto-form input,
+.contacto-form textarea{
+  width:100%;
+  padding:18px;
+  margin-bottom:15px;
+  border:none;
+  border-radius:12px;
+  background:rgba(255,255,255,.06);
+  color:white;
+  outline:none;
+}
+
+.contacto-form textarea{
+  min-height:120px;
+  resize:none;
+}
+
+.contacto-form button{
+  width:100%;
+  padding:18px;
+  border:none;
+  border-radius:50px;
+  background:linear-gradient(45deg,#ff7b00,#ff3c7b);
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.contacto-form button:hover{
+  transform:scale(1.03);
+}
+
+@media(max-width:900px){
+
+.contacto-container{
+  grid-template-columns:1fr;
+}
+
+.contacto-info h2{
+  font-size:42px;
+  text-align:center;
+}
+
+.contacto-info p{
+  text-align:center;
+}
+
+}
+
 </style>
 </head>
 
@@ -1264,6 +1376,53 @@ La energía está subiendo… el momento se acerca
         No. Habrá una amplia zona gastronómica dentro del festival.
     </div>
 </div>
+
+</section>
+
+<section class="contacto-section">
+
+  <div class="contacto-container">
+
+    <div class="contacto-info">
+
+      <h2>Vive la <span>experiencia</span> Vibra Perú 🎆</h2>
+
+      <p>
+        Déjanos tus datos y recibe noticias exclusivas,
+        preventas, promociones y anuncios de artistas antes que nadie.
+      </p>
+
+      <div class="contacto-beneficios">
+
+        <div>🎟️ Acceso a preventas</div>
+
+        <div>🎤 Anuncio de artistas</div>
+
+        <div>⚡ Promociones exclusivas</div>
+
+        <div>🎆 Información del festival</div>
+
+      </div>
+
+    </div>
+
+    <div class="contacto-form">
+
+      <h3>Déjanos tus datos</h3>
+
+      <input type="text" placeholder="Nombre completo">
+
+      <input type="email" placeholder="Correo electrónico">
+
+      <input type="tel" placeholder="Número de teléfono">
+
+      <textarea placeholder="¿Qué información te gustaría recibir?"></textarea>
+
+      <button>🎟️ QUIERO MÁS INFORMACIÓN</button>
+
+    </div>
+
+  </div>
 
 </section>
 
